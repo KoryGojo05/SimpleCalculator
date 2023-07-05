@@ -50,19 +50,19 @@ def EN_Calculator():
                         print("La suma de",num1,"y de",num2,"es",sumt)
                 elif opr==2:
                         print(oprmsg2)
-                        num1=float(input("Escribe un número: "))
+                        num1=float(input("Write a number: "))
                         num2=float(input("Escribe otro número: "))
                         resta=num1-num2
                         print("La resta de",num1,"y de",num2,"es",resta)
                 elif opr==3:
                         print(oprmsg3)
-                        num1=float(input("Escribe un número: "))
+                        num1=float(input("Write a number: "))
                         num2=float(input("Escribe otro número: "))
                         multi=num1*num2
                         print("La multiplicación de",num1,"por",num2,"es",multi)
                 elif opr==4:
                         print(oprmsg4)
-                        num1=float(input("Escribe un número: "))
+                        num1=float(input("Write a number: "))
                         num2=float(input("Escribe otro número: "))
                         div=num1/num2
                         print("La división de",num1,"entre",num2,"es",div)
@@ -74,17 +74,16 @@ def EN_Calculator():
                         print("La potencia de",num1,"elevado a",num2,"es:",pot)
                 elif opr==6:
                         print(oprmsg6)
-                        num1=float(input("Escribe un número: "))
+                        num1=float(input("Write a number: "))
                         raiz=sqrt(num1)
                         print("La raiz cuadrada de",num1,"es:",raiz)
                 wait=0
                 while wait!=10000000:
                         wait+=1
-                if opr!=0:
-                        continuar=input("Presiona \"Enter\" para continuar...")
-                        while continuar!="":
-                                continuar=input("ERROR: Presiona \"Enter\" para continuar...")
-
+                if pro!=0:
+                        next=input("Press \"Enter\" to continue...")
+                        while next!="":
+                                next=input("ERROR: Press \"Enter\" to continue...")
         print(" \nFinalizando Programa...")
         while wait!=10000000:
                 wait=wait+1
