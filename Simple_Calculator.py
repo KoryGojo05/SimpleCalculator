@@ -33,6 +33,7 @@ while lng=="":
                 lng="FR"
         elif numlng==4:
                 lng="DE"
+        lng=str(lng)
 
 
 def lang():
