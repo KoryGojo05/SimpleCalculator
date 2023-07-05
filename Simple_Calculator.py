@@ -15,8 +15,8 @@ msgpro2=str("2. Calculator")
 def languages():
         msglng1=str("1. English")
         msglng2=str("2. Spanish")
-        msglng3=str("3. French")
-        msglng4=str("4. Deutsch")
+        #msglng3=str("3. French")
+        #msglng4=str("4. Deutsch")
         return()
 
 
