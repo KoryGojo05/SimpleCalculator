@@ -17,6 +17,7 @@ def languages():
         msglng2=str("2. Spanish")
         #msglng3=str("3. French")
         #msglng4=str("4. Deutsch")
+        print()
         return()
 
 
@@ -24,16 +25,16 @@ def EN_Calculator():
         wait=0
         opr=-1
         oprmsg0=str("\n0.Finish Program")
-        oprmsg1=str("1. Addition")
-        oprmsg2=str("2. Subtraction")
-        oprmsg3=str("3. Multiplication")
-        oprmsg4=str("4. Division")
-        oprmsg5=str("5. Power")
-        oprmsg6=str("6. Square Root")
+        oprmsg1=str("\n1. Addition")
+        oprmsg2=str("\n2. Subtraction")
+        oprmsg3=str("\n3. Multiplication")
+        oprmsg4=str("\n4. Division")
+        oprmsg5=str("\n5. Power")
+        oprmsg6=str("\n6. Square Root")
         maxopr=int(6)
         while opr!=0:
-                print(oprmsg0+"\n"+oprmsg1+"\n"+oprmsg2+"\n"+oprmsg3)
-                print(oprmsg4+"\n"+oprmsg5+"\n"+oprmsg6)
+                print(oprmsg0+oprmsg1+oprmsg2+oprmsg3)
+                print(oprmsg4+oprmsg5+oprmsg6)
                 opr=input("\nWrite te number of operation you want to do: ")
                 try:
                         opr=int(opr)
@@ -75,8 +76,8 @@ def EN_Calculator():
                 elif opr==6:
                         print(oprmsg6)
                         num1=float(input("Write a number: "))
-                        raiz=sqrt(num1)
-                        print("La raiz cuadrada de",num1,"es:",raiz)
+                        square=sqrt(num1)
+                        print("La raiz cuadrada de",num1,"es:",square)
                 wait=0
                 while wait!=10000000:
                         wait+=1
