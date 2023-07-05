@@ -65,11 +65,11 @@ def EN_Calculator():
                         num1=float(input("Write a number: "))
                         num2=float(input("Write another number: "))
                         div=num1/num2
-                        print("La división de",num1,"entre",num2,"es",div)
+                        print("The division of",num1,"between",num2,"is",div)
                 elif opr==5:
                         print(oprmsg5)
-                        num1=float(input("Escribe la base de la potencia: "))
-                        num2=float(input("Escribe el exponente de la potencia: "))
+                        num1=float(input("Write the power base: "))
+                        num2=float(input("Write the exponent of power: "))
                         pot=num1**num2
                         print("La potencia de",num1,"elevado a",num2,"es:",pot)
                 elif opr==6:
