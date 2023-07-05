@@ -9,7 +9,7 @@ pro=int(-1)
 msgpro0=str("\n0.Finish Program")
 msgpro1=str("\n1. Select Language")
 msgpro2=str("\n2. Calculator")
-lng=""
+lng="EN"
 
 """
 def lang():
