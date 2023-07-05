@@ -5,13 +5,14 @@ import math
 from math import sqrt
 
 
-lng=int(-1)
-msgpro0=str("\n0. Finalizar Programa")
-msgpro1=str("1. Select Language")
-msgpro2=str("2. Calculator")
+pro=int(-1)
+msgpro0=str("\n0.Finish Program")
+msgpro1=str("\n1. Select Language")
+msgpro2=str("\n2. Calculator")
+lng="EN"
 
 
-def lang():
+def lang(lng):
         maxlng=int(4)
         msglng1=str("\n1. English")
         msglng2=str("\n2. Spanish")
@@ -34,7 +35,7 @@ def lang():
                 lng="FR"
         elif numlng==4:
                 lng="DE"
-        return(maxlng)
+        return(lng)
 
 
 def EN_Calc():
@@ -183,12 +184,43 @@ def ES_Calc():
                 wait=wait+1
         return()
 
-"""
-pro=int(-1)
+
+def FR_Calc():
+        
+        return()
 
 
+def DE_Calc():
+
+        return()
+
+
+while pro!=0:
+        print(msgpro0+msgpro1+msgpro2)
+        pro=input("\nWrite the number of operation you want to do: ")
+        try:
+                pro=int(pro)
+                if pro<0 or pro>2:
+                        print("\nERROR: The indicated number isn't listed.")
+        except:
+                pro=-1
+                print("\nERROR: The indicated number isn't listed.")
         if pro==1:
-                EN_Calc()
+                lang(lng)
         elif pro==2:
-                ES_Calc()
-"""
+                if lng=="EN":
+                        EN_Calc()
+                elif lng=="ES":
+                        ES_Calc()
+                elif lng=="FR":
+                        FR_Calc()
+                elif lng=="DE":
+                        DE_Calc()
+
+print(" \nFinalizando Programa...")
+while wait!=10000000:
+        wait=wait+1
+print("Programa Finalizado")
+wait=0
+while wait!=5000000:
+        wait=wait+1
