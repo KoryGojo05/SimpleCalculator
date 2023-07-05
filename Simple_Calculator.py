@@ -5,7 +5,6 @@ import math
 from math import sqrt
 
 
-maxlng=int(4)
 lng=int(-1)
 msgpro0=str("\n0. Finalizar Programa")
 msgpro1=str("1. Select Language")
@@ -13,12 +12,29 @@ msgpro2=str("2. Calculator")
 
 
 def languages():
-        msglng1=str("1. English")
-        msglng2=str("2. Spanish")
-        #msglng3=str("3. French")
-        #msglng4=str("4. Deutsch")
-        print()
-        return()
+        maxlng=int(4)
+        msglng1=str("\n1. English")
+        msglng2=str("\n2. Spanish")
+        #msglng3=str("\n3. French")
+        #msglng4=str("\n4. Deutsch")
+        print(msglng1+msglng2)
+        numlng=input("Write the number of language you want")
+        try:
+                numlng=int(numlng)
+                if numlng<0 or numlng>maxlng:
+                        print("\nERROR: The indicated number isn't listed")
+        except:
+                numlng=-1
+                print("\nERROR: The indicated number isn't listed")
+        if numlng==1:
+                lng="EN"
+        elif numlng==2:
+                lng="ES"
+        elif numlng==3:
+                lng="FR"
+        elif numlng==4:
+                lng="DE"
+        return(maxlng)
 
 
 def EN_Calculator():
@@ -33,9 +49,8 @@ def EN_Calculator():
         oprmsg6=str("\n6. Square Root")
         maxopr=int(6)
         while opr!=0:
-                print(oprmsg0+oprmsg1+oprmsg2+oprmsg3)
-                print(oprmsg4+oprmsg5+oprmsg6)
-                opr=input("\nWrite te number of operation you want to do: ")
+                print(oprmsg0+oprmsg1+oprmsg2+oprmsg3+oprmsg4+oprmsg5+oprmsg6)
+                opr=input("\nWrite the number of operation you want to do: ")
                 try:
                         opr=int(opr)
                         if opr<0 or opr>maxopr:
@@ -81,7 +96,7 @@ def EN_Calculator():
                 wait=0
                 while wait!=10000000:
                         wait+=1
-                if pro!=0:
+                if opr!=0:
                         next=input("Press \"Enter\" to continue...")
                         while next!="":
                                 next=input("ERROR: Press \"Enter\" to continue...")
@@ -169,6 +184,7 @@ def ES_Calculator():
                 wait=wait+1
         return()
 
+"""
 while lng!=0:
         print(msgpro0+"\n")
         pro=input("\nWrite the number of the program you want to do: ")
@@ -189,3 +205,4 @@ while lng!=0:
                 next=input("Press \"Enter\" to continue...")
                 while next!="":
                         next=input("ERROR: Press \"Enter\" to continue...")
+"""
