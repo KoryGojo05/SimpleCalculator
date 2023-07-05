@@ -1,12 +1,15 @@
 #!/usr/bin/python -tt
-#Programa que realiza los 6 principales cálculos matematicos
-#Suma, resta, multiplicación, división, potencia y raíz cuadrada
+#Program that performs the 6 main mathematical calculations
+#Addition, Subtraction, Multiplication, Division, Power, Square Root
 import math
 from math import sqrt
 
-fileinfo=()
+
 maxlng=int(4)
+lng=int(-1)
 msgpro0=str("\n0. Finalizar Programa")
+msgpro1=str("1. Select Language")
+msgpro2=str("2. Calculator")
 
 
 def languages():
@@ -20,7 +23,7 @@ def languages():
 def EN_Calculator():
         wait=0
         opr=-1
-        oprmsg0=str("\n0.Finalizar Programa")
+        oprmsg0=str("\n0.Finish Program")
         oprmsg1=str("1. Addition")
         oprmsg2=str("2. Subtraction")
         oprmsg3=str("3. Multiplication")
@@ -166,16 +169,16 @@ def ES_Calculator():
                 wait=wait+1
         return()
 
-while pro!=0:
+while lng!=0:
         print(msgpro0+"\n")
-        pro=input("\nEscribe el número del programa que quieres ejecutar: ")
+        pro=input("\nWrite the number of the program you want to do: ")
         try:
                 pro=int(pro)
                 if pro<0 or pro>maxlng:
-                        print("\nERROR: El carácter indicado no se encuentra en la lista.")
+                        print("\nERROR: The indicated character isn't listed.")
         except:
                 op=-1
-                print("\nERROR: El carácter indicado no se encuentra en la lista.")
+                print("\nERROR: The indicated character isn't listed.")
         
         if pro==1:
                 EN_Calculator()
@@ -183,6 +186,6 @@ while pro!=0:
                 ES_Calculator()
         
         if pro!=0:
-                continuar=input("Presiona \"Enter\" para continuar...")
-                while continuar!="":
-                        continuar=input("ERROR: Presiona \"Enter\" para continuar...")
+                next=input("Press \"Enter\" to continue...")
+                while next!="":
+                        next=input("ERROR: Press \"Enter\" to continue...")
