@@ -45,25 +45,25 @@ def EN_Calculator():
                 if opr==1:
                         print(oprmsg1)
                         num1=float(input("Write a number: "))
-                        num2=float(input("Escribe otro número: "))
+                        num2=float(input("Write another number: "))
                         sumt=num1+num2
                         print("La suma de",num1,"y de",num2,"es",sumt)
                 elif opr==2:
                         print(oprmsg2)
                         num1=float(input("Write a number: "))
-                        num2=float(input("Escribe otro número: "))
-                        resta=num1-num2
-                        print("La resta de",num1,"y de",num2,"es",resta)
+                        num2=float(input("Write another number: "))
+                        subt=num1-num2
+                        print("Subtract of",num1,"and",num2,"is",subt)
                 elif opr==3:
                         print(oprmsg3)
                         num1=float(input("Write a number: "))
-                        num2=float(input("Escribe otro número: "))
+                        num2=float(input("Write another number: "))
                         multi=num1*num2
-                        print("La multiplicación de",num1,"por",num2,"es",multi)
+                        print("Multiplication of",num1,"by",num2,"is",multi)
                 elif opr==4:
                         print(oprmsg4)
                         num1=float(input("Write a number: "))
-                        num2=float(input("Escribe otro número: "))
+                        num2=float(input("Write another number: "))
                         div=num1/num2
                         print("La división de",num1,"entre",num2,"es",div)
                 elif opr==5:
