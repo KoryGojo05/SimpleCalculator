@@ -70,7 +70,7 @@ def EN_Calc():
                                 except:
                                         num1=float()
                                         print("\nERROR: That isn't a number.")
-                                if num1==0 or num1>0 or num1<0:
+                               
                                         correct=True
                                 
                         num1=float(num1)
