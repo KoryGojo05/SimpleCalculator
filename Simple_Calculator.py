@@ -62,7 +62,18 @@ def EN_Calc():
                         print("\nERROR: The indicated number isn't listed.")
                 if opr==1:
                         print(oprmsg1)
-                        num1=float(input("Write a number: "))
+                        correct=False
+                        while correct==False:
+                                num1=input("Write a number: ")
+                                try:
+                                        num1=float(num1)
+                                except:
+                                        num1=float()
+                                        print("\nERROR: That isn't a number.")
+                                if num1==0 or num1>0 or num1<0:
+                                        correct=True
+                                
+                        num1=float(num1)
                         num2=float(input("Write another number: "))
                         sumt=num1+num2
                         print("The sum of",num1,"and",num2,"is",sumt)
@@ -117,6 +128,9 @@ def EN_Calc():
         while wait!=5000000:
                 wait=wait+1
         return()
+
+def new_func(num1):
+    return num1
 
 
 def ES_Calc():
