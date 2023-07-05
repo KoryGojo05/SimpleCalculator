@@ -36,6 +36,8 @@ def lang():
         elif numlng==4:
                 lng="DE"
         return()
+
+
 """
 
 def EN_Calc():
