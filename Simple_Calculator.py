@@ -34,7 +34,7 @@ def EN_Calculator():
         while opr!=0:
                 print(oprmsg0+"\n"+oprmsg1+"\n"+oprmsg2+"\n"+oprmsg3)
                 print(oprmsg4+"\n"+oprmsg5+"\n"+oprmsg6)
-                opr=input("\nEscribe el número del cálculo que quieres hacer: ")
+                opr=input("\nWrite te number of operation you want to do: ")
                 try:
                         opr=int(opr)
                         if opr<0 or opr>maxopr:
