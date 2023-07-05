@@ -67,13 +67,11 @@ def EN_Calc():
                                 num1=input("Write a number: ")
                                 try:
                                         num1=float(num1)
-                                except:
-                                        num1=float()
-                                        print("\nERROR: That isn't a number.")
-                               
                                         correct=True
-                                
-                        num1=float(num1)
+                                except:
+                                        print("\nERROR: That isn't a number.")
+                               
+                                
                         num2=float(input("Write another number: "))
                         sumt=num1+num2
                         print("The sum of",num1,"and",num2,"is",sumt)
