@@ -11,7 +11,7 @@ msgpro1=str("1. Select Language")
 msgpro2=str("2. Calculator")
 
 
-def languages():
+def lang():
         maxlng=int(4)
         msglng1=str("\n1. English")
         msglng2=str("\n2. Spanish")
@@ -37,7 +37,7 @@ def languages():
         return(maxlng)
 
 
-def EN_Calculator():
+def EN_Calc():
         wait=0
         opr=-1
         oprmsg0=str("\n0.Finish Program")
@@ -63,7 +63,7 @@ def EN_Calculator():
                         num1=float(input("Write a number: "))
                         num2=float(input("Write another number: "))
                         sumt=num1+num2
-                        print("La suma de",num1,"y de",num2,"es",sumt)
+                        print("The sum of",num1,"and",num2,"is",sumt)
                 elif opr==2:
                         print(oprmsg2)
                         num1=float(input("Write a number: "))
@@ -87,12 +87,12 @@ def EN_Calculator():
                         num1=float(input("Write the power base: "))
                         num2=float(input("Write the exponent of power: "))
                         pot=num1**num2
-                        print("La potencia de",num1,"elevado a",num2,"es:",pot)
+                        print("The power of",num1,"raised to",num2,"is",pot)
                 elif opr==6:
                         print(oprmsg6)
                         num1=float(input("Write a number: "))
                         square=sqrt(num1)
-                        print("La raiz cuadrada de",num1,"es:",square)
+                        print("The square root of",num1,"is",square)
                 wait=0
                 while wait!=10000000:
                         wait+=1
@@ -110,20 +110,19 @@ def EN_Calculator():
         return()
 
 
-def ES_Calculator():
+def ES_Calc():
         wait=0
         opr=-1
         oprmsg0=str("\n0.Finalizar Programa")
-        oprmsg1=str("1. Suma")
-        oprmsg2=str("2. Resta")
-        oprmsg3=str("3. Multiplicación")
-        oprmsg4=str("4. División")
-        oprmsg5=str("5. Potencia")
-        oprmsg6=str("6. Raíz Cuadrada")
+        oprmsg1=str("\n1. Suma")
+        oprmsg2=str("\n2. Resta")
+        oprmsg3=str("\n3. Multiplicación")
+        oprmsg4=str("\n4. División")
+        oprmsg5=str("\n5. Potencia")
+        oprmsg6=str("\n6. Raíz Cuadrada")
         maxopr=int(6)
         while opr!=0:
-                print(oprmsg0+"\n"+oprmsg1+"\n"+oprmsg2+"\n"+oprmsg3)
-                print(oprmsg4+"\n"+oprmsg5+"\n"+oprmsg6)
+                print(oprmsg0+oprmsg1+oprmsg2+oprmsg3+oprmsg4+oprmsg5+oprmsg6)
                 opr=input("\nEscribe el número del cálculo que quieres hacer: ")
                 try:
                         opr=int(opr)
@@ -185,24 +184,11 @@ def ES_Calculator():
         return()
 
 """
-while lng!=0:
-        print(msgpro0+"\n")
-        pro=input("\nWrite the number of the program you want to do: ")
-        try:
-                pro=int(pro)
-                if pro<0 or pro>maxlng:
-                        print("\nERROR: The indicated number isn't listed.")
-        except:
-                op=-1
-                print("\nERROR: The indicated number isn't listed.")
-        
+pro=int(-1)
+
+
         if pro==1:
-                EN_Calculator()
+                EN_Calc()
         elif pro==2:
-                ES_Calculator()
-        
-        if pro!=0:
-                next=input("Press \"Enter\" to continue...")
-                while next!="":
-                        next=input("ERROR: Press \"Enter\" to continue...")
+                ES_Calc()
 """
