@@ -38,13 +38,13 @@ def EN_Calculator():
                 try:
                         opr=int(opr)
                         if opr<0 or opr>maxopr:
-                                print("\nERROR: El carácter indicado no se encuentra en la lista.")
+                                print("\nERROR: The indicated number isn't listed.")
                 except:
                         opr=-1
-                        print("\nERROR: El carácter indicado no se encuentra en la lista.")
+                        print("\nERROR: The indicated number isn't listed.")
                 if opr==1:
                         print(oprmsg1)
-                        num1=float(input("Escribe un número: "))
+                        num1=float(input("Write a number: "))
                         num2=float(input("Escribe otro número: "))
                         sumt=num1+num2
                         print("La suma de",num1,"y de",num2,"es",sumt)
@@ -175,10 +175,10 @@ while lng!=0:
         try:
                 pro=int(pro)
                 if pro<0 or pro>maxlng:
-                        print("\nERROR: The indicated character isn't listed.")
+                        print("\nERROR: The indicated number isn't listed.")
         except:
                 op=-1
-                print("\nERROR: The indicated character isn't listed.")
+                print("\nERROR: The indicated number isn't listed.")
         
         if pro==1:
                 EN_Calculator()
