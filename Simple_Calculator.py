@@ -9,17 +9,15 @@ pro=int(-1)
 msgpro0=str("\n0.Finish Program")
 msgpro1=str("\n1. Select Language")
 msgpro2=str("\n2. Calculator")
-lng="EN"
-
-
-def lang(lng):
-        maxlng=int(4)
-        msglng1=str("\n1. English")
-        msglng2=str("\n2. Spanish")
-        msglng3=str("\n3. French")
-        msglng4=str("\n4. Deutsch")
+lng=str("")
+maxlng=int(2)
+msglng1=str("\n1. English")
+msglng2=str("\n2. Spanish")
+msglng3=str("\n3. French")
+msglng4=str("\n4. Deutsch")
+while lng=="":
         print(msglng1+msglng2)
-        numlng=input("Write the number of language you want")
+        numlng=input("Write the number of language you want: ")
         try:
                 numlng=int(numlng)
                 if numlng<0 or numlng>maxlng:
@@ -35,7 +33,32 @@ def lang(lng):
                 lng="FR"
         elif numlng==4:
                 lng="DE"
-        return(lng)
+
+
+def lang():
+        maxlng=int(4)
+        msglng1=str("\n1. English")
+        msglng2=str("\n2. Spanish")
+        msglng3=str("\n3. French")
+        msglng4=str("\n4. Deutsch")
+        print(msglng1+msglng2)
+        numlng=input("Write the number of language you want: ")
+        try:
+                numlng=int(numlng)
+                if numlng<0 or numlng>maxlng:
+                        print("\nERROR: The indicated number isn't listed")
+        except:
+                numlng=-1
+                print("\nERROR: The indicated number isn't listed")
+        if numlng==1:
+                lng="EN"
+        elif numlng==2:
+                lng="ES"
+        elif numlng==3:
+                lng="FR"
+        elif numlng==4:
+                lng="DE"
+        return()
 
 
 def EN_Calc():
@@ -222,7 +245,7 @@ while pro!=0:
                 pro=-1
                 print("\nERROR: The indicated number isn't listed.")
         if pro==1:
-                lang(lng)
+                lang()
         elif pro==2:
                 if lng=="EN":
                         EN_Calc()
@@ -233,10 +256,11 @@ while pro!=0:
                 elif lng=="DE":
                         DE_Calc()
 
-print(" \nFinalizando Programa...")
+print("\nFinishing Program...")
+wait=0
 while wait!=10000000:
         wait=wait+1
-print("Programa Finalizado")
+print("The Program Finished")
 wait=0
 while wait!=5000000:
         wait=wait+1
