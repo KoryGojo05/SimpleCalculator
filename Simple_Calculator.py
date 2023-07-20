@@ -11,6 +11,11 @@ msgpro1=str("\n1. Select Language")
 msgpro2=str("\n2. Calculator")
 lng="EN"
 
+
+
+
+
+
 """
 def lang():
         maxlng=int(4)
@@ -37,6 +42,8 @@ def lang():
                 lng="DE"
         return()
 
+
+languages={
 
 """
 
