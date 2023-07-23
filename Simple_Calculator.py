@@ -265,9 +265,11 @@ while pro!=0:
                 elif lng=="ES":
                         ES_Calc()
                 elif lng=="FR":
-                        FR_Calc()
+                        fr=0
+                        #FR_Calc()
                 elif lng=="DE":
-                        DE_Calc()
+                        de=0
+                        #DE_Calc()
 
 print("\nFinishing Program...")
 wait=0
