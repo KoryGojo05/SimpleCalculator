@@ -43,7 +43,7 @@ def lang():
         return()
 
 """
-#languages = { EN:{oprmsg0: \n0.Finish Program, }
+# languages = { EN:{oprmsg0:"\n0.Finish Program", } }
 
 
 
