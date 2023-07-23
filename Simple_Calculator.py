@@ -9,7 +9,12 @@ pro=int(-1)
 msgpro0=str("\n0.Finish Program")
 msgpro1=str("\n1. Select Language")
 msgpro2=str("\n2. Calculator")
-lng=""
+lng="EN"
+
+
+
+
+
 
 """
 def lang():
@@ -36,7 +41,11 @@ def lang():
         elif numlng==4:
                 lng="DE"
         return()
+
 """
+#languages = { EN:{oprmsg0: \n0.Finish Program, }
+
+
 
 def EN_Calc():
         wait=0
@@ -67,13 +76,13 @@ def EN_Calc():
                                 num1=input("Write a number: ")
                                 try:
                                         num1=float(num1)
-                                except:
-                                        num1=float()
-                                        print("\nERROR: That isn't a number.")
-                                if num1==0 or num1>0 or num1<0:
                                         correct=True
+                                except:
+                                        print("\nERROR: That isn't a number.")
+                               
+
                                 
-                        num1=float(num1)
+
                         num2=float(input("Write another number: "))
                         sumt=num1+num2
                         print("The sum of",num1,"and",num2,"is",sumt)
@@ -212,16 +221,6 @@ def ES_Calc():
         wait=0
         while wait!=5000000:
                 wait=wait+1
-        return()
-
-
-def FR_Calc():
-
-        return()
-
-
-def DE_Calc():
-
         return()
 
 
