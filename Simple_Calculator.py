@@ -11,11 +11,6 @@ msgpro1=str("\n1. Select Language")
 msgpro2=str("\n2. Calculator")
 lng="EN"
 
-
-
-
-
-
 """
 def lang():
         maxlng=int(4)
@@ -43,12 +38,13 @@ def lang():
         return()
 
 """
+
 languages = { "EN":{"oprmsg0":"\n0. Finish Program", "oprmsg1":"\n1. Addition", "oprmsg2":"\n2. Subtraction",
                     "oprmsg3": "\n3. Multiplication", "oprmsg4":"\n4. Division", "oprmsg5":"\n5. Power", "oprmsg6":"\n6. Square Root"},
                 "ES": {"oprmsg0":"\n0. Finalizar Programa", "oprmsg1":"\n1. Sumar", "oprmsg2":"\n2. Restar",
                     "oprmsg3": "\n3. Multiplicación", "oprmsg4":"\n4. División", "oprmsg5":"\n5. Potencia", "oprmsg6":"\n6. Raíz Cuadrada"}
-                
-                
+                #"FR"
+                #"DE"
                 }
 
 
@@ -144,9 +140,6 @@ def EN_Calc():
                 wait=wait+1
         return()
 
-def new_func(num1):
-    return num1
-
 
 def ES_Calc():
         wait=0
@@ -241,7 +234,6 @@ while pro!=0:
                 pro=-1
                 print("\nERROR: The indicated number isn't listed.")
         if pro==1:
-                #lang()
                 maxlng=int(4)
                 msglng1=str("\n1. English")
                 msglng2=str("\n2. Spanish")
