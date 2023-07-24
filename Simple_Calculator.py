@@ -43,14 +43,20 @@ def lang():
         return()
 
 """
-# languages = { EN:{oprmsg0:"\n0.Finish Program", } }
+languages = { "EN":{"oprmsg0":"\n0. Finish Program", "oprmsg1":"\n1. Addition", "oprmsg2":"\n2. Subtraction",
+                    "oprmsg3": "\n3. Multiplication", "oprmsg4":"\n4. Division", "oprmsg5":"\n5. Power", "oprmsg6":"\n6. Square Root"},
+                "ES": {"oprmsg0":"\n0. Finalizar Programa", "oprmsg1":"\n1. Sumar", "oprmsg2":"\n2. Restar",
+                    "oprmsg3": "\n3. Multiplicación", "oprmsg4":"\n4. División", "oprmsg5":"\n5. Potencia", "oprmsg6":"\n6. Raíz Cuadrada"}
+                
+                
+                }
 
 
 
 def EN_Calc():
         wait=0
         opr=-1
-        oprmsg0=str("\n0.Finish Program")
+        oprmsg0=str("\n0. Finish Program")
         oprmsg1=str("\n1. Addition")
         oprmsg2=str("\n2. Subtraction")
         oprmsg3=str("\n3. Multiplication")
@@ -145,7 +151,7 @@ def new_func(num1):
 def ES_Calc():
         wait=0
         opr=-1
-        oprmsg0=str("\n0.Finalizar Programa")
+        oprmsg0=str("\n0. Finalizar Programa")
         oprmsg1=str("\n1. Suma")
         oprmsg2=str("\n2. Resta")
         oprmsg3=str("\n3. Multiplicación")
