@@ -1,4 +1,3 @@
-#!/usr/bin/python -tt
 #Program that performs the 6 main mathematical calculations
 #Addition, Subtraction, Multiplication, Division, Power, Square Root
 import math
@@ -39,29 +38,22 @@ def lang():
 
 """
 
-languages = { "EN":{"oprmsg0":"\n0. Finish Program", "oprmsg1":"\n1. Addition", "oprmsg2":"\n2. Subtraction",
-                    "oprmsg3": "\n3. Multiplication", "oprmsg4":"\n4. Division", "oprmsg5":"\n5. Power", "oprmsg6":"\n6. Square Root"},
-                "ES": {"oprmsg0":"\n0. Finalizar Programa", "oprmsg1":"\n1. Sumar", "oprmsg2":"\n2. Restar",
-                    "oprmsg3": "\n3. Multiplicación", "oprmsg4":"\n4. División", "oprmsg5":"\n5. Potencia", "oprmsg6":"\n6. Raíz Cuadrada"}
+languages = { "EN":{"oprmsg0":"0. Finish Program", "oprmsg1":"1. Addition", "oprmsg2":"2. Subtraction",
+                    "oprmsg3": "3. Multiplication", "oprmsg4":"4. Division", "oprmsg5":"5. Power", "oprmsg6":"6. Square Root"},
+                "ES": {"oprmsg0":"0. Finalizar Programa", "oprmsg1":"1. Sumar", "oprmsg2":"2. Restar",
+                    "oprmsg3": "3. Multiplicación", "oprmsg4":"4. División", "oprmsg5":"5. Potencia", "oprmsg6":"6. Raíz Cuadrada"}
                 #"FR"
                 #"DE"
                 }
 
 
-
 def EN_Calc():
         wait=0
         opr=-1
-        oprmsg0=str("\n0. Finish Program")
-        oprmsg1=str("\n1. Addition")
-        oprmsg2=str("\n2. Subtraction")
-        oprmsg3=str("\n3. Multiplication")
-        oprmsg4=str("\n4. Division")
-        oprmsg5=str("\n5. Power")
-        oprmsg6=str("\n6. Square Root")
         maxopr=int(6)
         while opr!=0:
-                print(oprmsg0+oprmsg1+oprmsg2+oprmsg3+oprmsg4+oprmsg5+oprmsg6)
+                for value in languages[lng].values():
+                        print(value)
                 opr=input("\nWrite the number of operation you want to do: ")
 
                 try:
@@ -144,16 +136,10 @@ def EN_Calc():
 def ES_Calc():
         wait=0
         opr=-1
-        oprmsg0=str("\n0. Finalizar Programa")
-        oprmsg1=str("\n1. Suma")
-        oprmsg2=str("\n2. Resta")
-        oprmsg3=str("\n3. Multiplicación")
-        oprmsg4=str("\n4. División")
-        oprmsg5=str("\n5. Potencia")
-        oprmsg6=str("\n6. Raíz Cuadrada")
         maxopr=int(6)
         while opr!=0:
-                print(oprmsg0+oprmsg1+oprmsg2+oprmsg3+oprmsg4+oprmsg5+oprmsg6)
+                for value in languages[lng].values():
+                        print(value)
                 opr=input("\nEscribe el número del cálculo que quieres hacer: ")
 
                 try:
