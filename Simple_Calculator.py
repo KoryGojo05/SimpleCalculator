@@ -10,40 +10,14 @@ msgpro1=str("\n1. Select Language")
 msgpro2=str("\n2. Calculator")
 lng="EN"
 
-"""
-def lang():
-        maxlng=int(4)
-        msglng1=str("\n1. English")
-        msglng2=str("\n2. Spanish")
-        msglng3=str("\n3. French")
-        msglng4=str("\n4. Deutsch")
-        print(msglng1+msglng2)
-        numlng=input("Write the number of language you want: ")
-        try:
-                numlng=int(numlng)
-                if numlng<0 or numlng>maxlng:
-                        print("\nERROR: The indicated number isn't listed")
-        except:
-                numlng=-1
-                print("\nERROR: The indicated number isn't listed")
-        if numlng==1:
-                lng="EN"
-        elif numlng==2:
-                lng="ES"
-        elif numlng==3:
-                lng="FR"
-        elif numlng==4:
-                lng="DE"
-        return()
-
-"""
-
-languages = { "EN":{"oprmsg0":"0. Finish Program", "oprmsg1":"1. Addition", "oprmsg2":"2. Subtraction",
-                    "oprmsg3": "3. Multiplication", "oprmsg4":"4. Division", "oprmsg5":"5. Power", "oprmsg6":"6. Square Root"},
+LANGUAGES = { "EN":{"oprmsg0":"0. Finish Program", "oprmsg1":"1. Addition", "oprmsg2":"2. Subtraction", "oprmsg3": "3. Multiplication", "oprmsg4":"4. Division", "oprmsg5":"5. Power", "oprmsg6":"6. Square Root", 
+                    "ERRORnum":"ERROR: That isn't a number.","num1":"Write a number: ","num2":"Write another number: ", "":""
+                    },
                 "ES": {"oprmsg0":"0. Finalizar Programa", "oprmsg1":"1. Sumar", "oprmsg2":"2. Restar",
-                    "oprmsg3": "3. Multiplicación", "oprmsg4":"4. División", "oprmsg5":"5. Potencia", "oprmsg6":"6. Raíz Cuadrada"}
-                #"FR"
-                #"DE"
+                    "oprmsg3": "3. Multiplicación", "oprmsg4":"4. División", "oprmsg5":"5. Potencia", "oprmsg6":"6. Raíz Cuadrada"
+                    },
+                "FR": {},
+                "DE": {},
                 }
 
 
@@ -52,8 +26,8 @@ def EN_Calc():
         opr=-1
         maxopr=int(6)
         while opr!=0:
-                for value in languages[lng].values():
-                        print(value)
+                for opt_menu in range(0,7):
+                        print(LANGUAGES[lng][f'oprmsg{opt_menu}'])
                 opr=input("\nWrite the number of operation you want to do: ")
 
                 try:
@@ -64,53 +38,56 @@ def EN_Calc():
                         opr=-1
                         print("\nERROR: The indicated number isn't listed.")
                 if opr==1:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         correct=False
                         while correct==False:
-                                num1=input("Write a number: ")
+                                num1=input(LANGUAGES[lng]["num1"])
                                 try:
                                         num1=float(num1)
                                         correct=True
                                 except:
-                                        print("\nERROR: That isn't a number.")
-                               
-
-                                
-
-                        num2=float(input("Write another number: "))
+                                        print(LANGUAGES[lng]["ERRORnum"])
+                        correct=False
+                        while correct==False:
+                                num2=float(input(LANGUAGES[lng]["num2"]))
+                                try:
+                                        num2=float(num2)
+                                        correct=True
+                                except:
+                                        print(LANGUAGES[lng]["ERRORnum"])
                         sumt=num1+num2
                         print("The sum of",num1,"and",num2,"is",sumt)
 
                 elif opr==2:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Write a number: "))
                         num2=float(input("Write another number: "))
                         subt=num1-num2
                         print("Subtract of",num1,"and",num2,"is",subt)
 
                 elif opr==3:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Write a number: "))
                         num2=float(input("Write another number: "))
                         multi=num1*num2
                         print("Multiplication of",num1,"by",num2,"is",multi)
 
                 elif opr==4:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Write a number: "))
                         num2=float(input("Write another number: "))
                         div=num1/num2
                         print("The division of",num1,"between",num2,"is",div)
 
                 elif opr==5:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Write the power base: "))
                         num2=float(input("Write the exponent of power: "))
                         pot=num1**num2
                         print("The power of",num1,"raised to",num2,"is",pot)
 
                 elif opr==6:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Write a number: "))
                         square=sqrt(num1)
                         print("The square root of",num1,"is",square)
@@ -138,7 +115,7 @@ def ES_Calc():
         opr=-1
         maxopr=int(6)
         while opr!=0:
-                for value in languages[lng].values():
+                for value in LANGUAGES[lng].values():
                         print(value)
                 opr=input("\nEscribe el número del cálculo que quieres hacer: ")
 
@@ -151,42 +128,42 @@ def ES_Calc():
                         print("\nERROR: El carácter indicado no se encuentra en la lista.")
 
                 if opr==1:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe un número: "))
                         num2=float(input("Escribe otro número: "))
                         sumt=num1+num2
                         print("La suma de",num1,"y de",num2,"es",sumt)
 
                 elif opr==2:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe un número: "))
                         num2=float(input("Escribe otro número: "))
                         resta=num1-num2
                         print("La resta de",num1,"y de",num2,"es",resta)
 
                 elif opr==3:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe un número: "))
                         num2=float(input("Escribe otro número: "))
                         multi=num1*num2
                         print("La multiplicación de",num1,"por",num2,"es",multi)
 
                 elif opr==4:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe un número: "))
                         num2=float(input("Escribe otro número: "))
                         div=num1/num2
                         print("La división de",num1,"entre",num2,"es",div)
 
                 elif opr==5:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe la base de la potencia: "))
                         num2=float(input("Escribe el exponente de la potencia: "))
                         pot=num1**num2
                         print("La potencia de",num1,"elevado a",num2,"es:",pot)
 
                 elif opr==6:
-                        print(languages[lng][f"oprmsg{opr}"])
+                        print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe un número: "))
                         raiz=sqrt(num1)
                         print("La raiz cuadrada de",num1,"es:",raiz)
