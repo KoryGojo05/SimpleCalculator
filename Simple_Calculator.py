@@ -5,13 +5,11 @@ from math import sqrt
 
 
 pro=int(-1)
-msgpro2=str("\n2. Calculator")
 lng="EN"
 
-LANGUAGES = { "EN":{"msgpro0":"\n0.Finish Program", "msgpro1":"\n1. Select Language", "opr":"\nWrite the number of operation you want to do: ", "oprmsg0":"0. Finish Program", "oprmsg1":"1. Addition", 
-                    "oprmsg2":"2. Subtraction", "oprmsg3": "3. Multiplication", "oprmsg4":"4. Division", "oprmsg5":"5. Power", 
-                    "oprmsg6":"6. Square Root", "ERRORnum":"ERROR: That isn't a number.", "num1":"Write a number: ",
-                    "num2":"Write another number: ", "next":"Press \"Enter\" to continue...", "ERRORnext":"ERROR: Press \"Enter\" to continue..."
+LANGUAGES = { "EN":{"msgpro0":"\n0.Finish Program", "msgpro1":"\n1. Select Language", "msgpro2":"\n2. Calculator", "opr":"\nWrite the number of operation you want to do: ", "oprmsg0":"0. Finish Program", 
+                    "oprmsg1":"1. Addition", "oprmsg2":"2. Subtraction", "oprmsg3": "3. Multiplication", "oprmsg4":"4. Division", "oprmsg5":"5. Power", "oprmsg6":"6. Square Root", 
+                    "ERRORnum":"ERROR: That isn't a number.", "num1":"Write a number: ", "num2":"Write another number: ", "next":"Press \"Enter\" to continue...", "ERRORnext":"ERROR: Press \"Enter\" to continue..."
                     },
                 "ES": {"oprmsg0":"0. Finalizar Programa", "oprmsg1":"1. Sumar", "oprmsg2":"2. Resta", "oprmsg3": "3. Multiplicación", "oprmsg4":"4. División", "oprmsg5":"5. Potencia", "oprmsg6":"6. Raíz Cuadrada", 
                     "ERRORnum":"ERROR: That isn't a number.","num1":"Escribe un número: ","num2":"Escribe otro número: ", "next":"Presiona \"Enter\" para continuar...", "ERRORnext":"ERROR: Presiona \"Enter\" para continuar...",
