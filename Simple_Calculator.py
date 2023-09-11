@@ -11,7 +11,7 @@ msgpro2=str("\n2. Calculator")
 lng="EN"
 
 LANGUAGES = { "EN":{"oprmsg0":"0. Finish Program", "oprmsg1":"1. Addition", "oprmsg2":"2. Subtraction", "oprmsg3": "3. Multiplication", "oprmsg4":"4. Division", "oprmsg5":"5. Power", "oprmsg6":"6. Square Root", 
-                    "ERRORnum":"ERROR: That isn't a number.","num1":"Write a number: ","num2":"Write another number: ", "":""
+                    "ERRORnum":"ERROR: That isn't a number.","num1":"Write a number: ","num2":"Write another number: ", "next":"Press \"Enter\" to continue...", "ERRORnext":"ERROR: Press \"Enter\" to continue..."
                     },
                 "ES": {"oprmsg0":"0. Finalizar Programa", "oprmsg1":"1. Sumar", "oprmsg2":"2. Restar",
                     "oprmsg3": "3. Multiplicación", "oprmsg4":"4. División", "oprmsg5":"5. Potencia", "oprmsg6":"6. Raíz Cuadrada"
@@ -88,7 +88,7 @@ def EN_Calc():
 
                 elif opr==6:
                         print(LANGUAGES[lng][f"oprmsg{opr}"])
-                        num1=float(input("Write a number: "))
+                        num1=float(input(LANGUAGES[lng]["num1"]))
                         square=sqrt(num1)
                         print("The square root of",num1,"is",square)
 
@@ -96,9 +96,9 @@ def EN_Calc():
                 while wait!=10000000:
                         wait+=1
                 if opr!=0:
-                        next=input("Press \"Enter\" to continue...")
+                        next=input(LANGUAGES[lng]["next"])
                         while next!="":
-                                next=input("ERROR: Press \"Enter\" to continue...")
+                                next=input(LANGUAGES[lng]["ERRORnext"])
 
         print(" \nFinishing Program...")
         while wait!=10000000:
