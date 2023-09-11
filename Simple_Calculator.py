@@ -74,8 +74,8 @@ def EN_Calc():
 
                 elif opr==4:
                         print(LANGUAGES[lng][f"oprmsg{opr}"])
-                        num1=float(input("Write a number: "))
-                        num2=float(input("Write another number: "))
+                        num1=float(input(LANGUAGES[lng]["num1"]))
+                        num2=float(input(LANGUAGES[lng]["num2"]))
                         div=num1/num2
                         print("The division of",num1,"between",num2,"is",div)
 
