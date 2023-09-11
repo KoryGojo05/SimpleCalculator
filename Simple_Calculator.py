@@ -60,8 +60,8 @@ def EN_Calc():
 
                 elif opr==2:
                         print(LANGUAGES[lng][f"oprmsg{opr}"])
-                        num1=float(input("Write a number: "))
-                        num2=float(input("Write another number: "))
+                        num1=float(input(LANGUAGES[lng]["num1"]))
+                        num2=float(input(LANGUAGES[lng]["num2"]))
                         subt=num1-num2
                         print("Subtract of",num1,"and",num2,"is",subt)
 
