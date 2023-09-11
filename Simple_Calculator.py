@@ -67,8 +67,8 @@ def EN_Calc():
 
                 elif opr==3:
                         print(LANGUAGES[lng][f"oprmsg{opr}"])
-                        num1=float(input("Write a number: "))
-                        num2=float(input("Write another number: "))
+                        num1=float(input(LANGUAGES[lng]["num1"]))
+                        num2=float(input(LANGUAGES[lng]["num2"]))
                         multi=num1*num2
                         print("Multiplication of",num1,"by",num2,"is",multi)
 
