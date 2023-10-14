@@ -1,7 +1,5 @@
 #Program that performs the 6 main mathematical calculations
-#Addition, Subtraction, Multiplication, Division, Power, Square Root
-import math
-from math import sqrt
+#Addition, Subtraction, Multiplication, Division, Power, Square Root
 
 pro=int(-1)
 lng="EN"
@@ -93,7 +91,7 @@ def EN_Calc():
                 elif opr==6:
                         print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input(LANGUAGES[lng]["num1"]))
-                        square=sqrt(num1)
+                        square=num1**0.5
                         print("The square root of",num1,"is",square)
 
                 wait=0
@@ -169,7 +167,7 @@ def ES_Calc():
                 elif opr==6:
                         print(LANGUAGES[lng][f"oprmsg{opr}"])
                         num1=float(input("Escribe un número: "))
-                        raiz=sqrt(num1)
+                        raiz=num1**0.5
                         print("La raiz cuadrada de",num1,"es:",raiz)
 
                 wait=0
