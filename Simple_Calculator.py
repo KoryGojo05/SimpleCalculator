@@ -16,10 +16,11 @@ LANGUAGES = {"EN": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Lan
                     "pownum2": "Write the exponent of power: ", "numlng": "Write the number of language you want: ",
                     "msgsum": "The sum de, %s y de %s es %s", "msgsub": "The subtract of %s and %s is %s",
                     "msgmul":"Multiplication of %s by %s is %s", "msgdiv":"The division of %s between %s is %s",
-                    "msgpow":"The power of %s raised to %s is %s",
+                    "msgpow":"The power of %s raised to %s is %s", "msgsqr":"The square root of %s is %s",
                     },
-             "ES": {"msgpro0": "\n0. Finalizar Programa", "msgpro1": "\n1. Seleccionar Idioma", "msgpro2": "\n2. Calculadora",
-                    "oprmsg0": "0. Finalizar Programa",
+             "ES": {"msgpro0": "\n0. Finalizar Programa", "msgpro1": "\n1. Seleccionar Idioma",
+                    "msgpro2": "\n2. Calculadora", "opr":"Escribe el número del cálculo que quieres hacer: ",
+                    "ERRORopr":"ERROR: El carácter indicado no es un número.", "oprmsg0": "0. Finalizar Programa",
                     "oprmsg1": "1. Sumar", "oprmsg2": "2. Resta", "oprmsg3": "3. Multiplicación",
                     "oprmsg4": "4. División", "oprmsg5": "5. Potencia", "oprmsg6": "6. Raíz Cuadrada",
                     "ERRORnum": "ERROR: El valor introducido no es un número.", "num1": "Escribe un número: ",
@@ -27,6 +28,8 @@ LANGUAGES = {"EN": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Lan
                     "ERRORnext": "ERROR: Presiona \"Enter\" para continuar...",
                     "numlng": "Escribe el número del idioma: ",
                     "msgsum": "La suma de, %s y de %s es %s", "msgsub":"La resta de, %s menos %s es %s",
+                    "msgmul":"La multiplicación de %s por %s es %s","msgdiv":"La división de %s entre %s es %s",
+                    "msgpow":"La potencia de %s elevado a %s es %s","msgsqr":"",
                     },
              "FR": {
 
@@ -37,7 +40,7 @@ LANGUAGES = {"EN": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Lan
              }
 
 
-def en_calc():
+def calc():
     wait = 0
     opr = -1
     maxopr = int(6)
@@ -135,8 +138,7 @@ def en_calc():
                 except:
                     print(LANGUAGES[lng]["ERRORnum"])
             result = num1 / num2
-            print(LANGUAGES[lng]["msgsum"] % (num1, num2, result))
-            # print("The division of", num1, "between", num2, "is", result)
+            print(LANGUAGES[lng]["msgdiv"] % (num1, num2, result))
 
         elif opr == 5:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
@@ -161,10 +163,16 @@ def en_calc():
 
         elif opr == 6:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
-            num1 = float(input(LANGUAGES[lng]["num1"]))
+            correct = False
+            while not correct:
+                num1 = float(input(LANGUAGES[lng]["num1"]))
+                try:
+                    num1 = float(num1)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
             result = num1 ** 0.5
-            print(LANGUAGES[lng]["msgsum"] % (num1, result))
-            # print("The square root of", num1, "is", result)
+            print(LANGUAGES[lng]["msgsqr"] % (num1, result))
 
         wait = 0
         while wait != 10000000:
@@ -184,6 +192,7 @@ def en_calc():
     return ()
 
 
+"""
 def ES_Calc():
     wait = 0
     opr = -1
@@ -259,6 +268,7 @@ def ES_Calc():
     while wait != 5000000:
         wait = wait + 1
     return ()
+"""
 
 
 while pro != 0:
@@ -272,7 +282,7 @@ while pro != 0:
         pro = -1
         print("\nERROR: The indicated number isn't listed.")
     if pro == 1:
-        maxlng = int(4)
+        maxlng = int(2)
         msglng1 = str("\n1. English")
         msglng2 = str("\n2. Spanish")
         msglng3 = str("\n3. French")
@@ -296,10 +306,7 @@ while pro != 0:
             lng = "DE"
         lng = str(lng)
     elif pro == 2:
-        if lng == "EN":
-            en_calc()
-        elif lng == "ES":
-            ES_Calc()
+        calc()
 
 print("\nFinishing Program...")
 wait = 0
