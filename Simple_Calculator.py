@@ -15,8 +15,10 @@ LANGUAGES = {"EN": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Lan
                     "ERRORopr": "\nERROR: The indicated number isn't listed.", "pownum1": "Write the power base: ",
                     "pownum2": "Write the exponent of power: ", "numlng": "Write the number of language you want: ",
                     "msgsum": "The sum de, %s y de %s es %s", "msgsub": "The subtract of %s and %s is %s",
+                    "msgmul":"Multiplication of %s by %s is %s", "msgdiv":"The division of %s between %s is %s",
+                    "msgpow":"The power of %s raised to %s is %s",
                     },
-             "ES": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Language", "msgpro2": "\n2. Calculator",
+             "ES": {"msgpro0": "\n0. Finalizar Programa", "msgpro1": "\n1. Seleccionar Idioma", "msgpro2": "\n2. Calculadora",
                     "oprmsg0": "0. Finalizar Programa",
                     "oprmsg1": "1. Sumar", "oprmsg2": "2. Resta", "oprmsg3": "3. Multiplicación",
                     "oprmsg4": "4. División", "oprmsg5": "5. Potencia", "oprmsg6": "6. Raíz Cuadrada",
@@ -24,7 +26,7 @@ LANGUAGES = {"EN": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Lan
                     "num2": "Escribe otro número: ", "next": "Presiona \"Enter\" para continuar...",
                     "ERRORnext": "ERROR: Presiona \"Enter\" para continuar...",
                     "numlng": "Escribe el número del idioma: ",
-                    "msgsum": "La suma de, %s y de %s es %s"
+                    "msgsum": "La suma de, %s y de %s es %s", "msgsub":"La resta de, %s menos %s es %s",
                     },
              "FR": {
 
@@ -74,34 +76,88 @@ def en_calc():
 
         elif opr == 2:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
-            num1 = float(input(LANGUAGES[lng]["num1"]))
-            num2 = float(input(LANGUAGES[lng]["num2"]))
+            correct = False
+            while not correct:
+                num1 = input(LANGUAGES[lng]["num1"])
+                try:
+                    num1 = float(num1)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
+            correct = False
+            while not correct:
+                num2 = float(input(LANGUAGES[lng]["num2"]))
+                try:
+                    num2 = float(num2)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
             result = num1 - num2
             print(LANGUAGES[lng]["msgsub"] % (num1, num2, result))
 
         elif opr == 3:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
-            num1 = float(input(LANGUAGES[lng]["num1"]))
-            num2 = float(input(LANGUAGES[lng]["num2"]))
+            correct = False
+            while not correct:
+                num1 = input(LANGUAGES[lng]["num1"])
+                try:
+                    num1 = float(num1)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
+            correct = False
+            while not correct:
+                num2 = float(input(LANGUAGES[lng]["num2"]))
+                try:
+                    num2 = float(num2)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
             result = num1 * num2
-            print(LANGUAGES[lng]["msgsum"] % (num1, num2, result))
-            # print("Multiplication of", num1, "by", num2, "is", result)
+            print(LANGUAGES[lng]["msgmul"] % (num1, num2, result))
 
         elif opr == 4:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
-            num1 = float(input(LANGUAGES[lng]["num1"]))
-            num2 = float(input(LANGUAGES[lng]["num2"]))
+            correct = False
+            while not correct:
+                num1 = input(LANGUAGES[lng]["num1"])
+                try:
+                    num1 = float(num1)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
+            correct = False
+            while not correct:
+                num2 = float(input(LANGUAGES[lng]["num2"]))
+                try:
+                    num2 = float(num2)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
             result = num1 / num2
             print(LANGUAGES[lng]["msgsum"] % (num1, num2, result))
             # print("The division of", num1, "between", num2, "is", result)
 
         elif opr == 5:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
-            num1 = float(input(LANGUAGES[lng]["pownum1"]))
-            num2 = float(input(LANGUAGES[lng]["pownum2"]))
+            correct = False
+            while not correct:
+                num1 = float(input(LANGUAGES[lng]["pownum1"]))
+                try:
+                    num1 = float(num1)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
+            correct = False
+            while not correct:
+                num2 = float(input(LANGUAGES[lng]["pownum2"]))
+                try:
+                    num2 = float(num2)
+                    correct = True
+                except:
+                    print(LANGUAGES[lng]["ERRORnum"])
             result = num1 ** num2
-            print(LANGUAGES[lng]["msgsum"] % (num1, num2, result))
-            # print("The power of", num1, "raised to", num2, "is", result)
+            print(LANGUAGES[lng]["msgpow"] % (num1, num2, result))
 
         elif opr == 6:
             print(LANGUAGES[lng][f"oprmsg{opr}"])
