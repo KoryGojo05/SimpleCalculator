@@ -4,6 +4,13 @@
 pro = int(-1)
 lng = "EN"
 
+def langlist():
+    msglng1 = str("\n1. English")
+    msglng2 = str("\n2. Spanish")
+    msglng3 = str("\n3. French")
+    msglng4 = str("\n4. Deutsch")
+    return()
+
 LANGUAGES = {"EN": {"msgpro0": "\n0.Finish Program", "msgpro1": "\n1. Select Language", "msgpro2": "\n2. Calculator",
                     "opr": "\nWrite the number of operation you want to do: ", "oprmsg0": "0. Finish Program",
                     "oprmsg1": "1. Addition", "oprmsg2": "2. Subtraction", "oprmsg3": "3. Multiplication",
@@ -283,11 +290,7 @@ while pro != 0:
         print("\nERROR: The indicated number isn't listed.")
     if pro == 1:
         maxlng = int(2)
-        msglng1 = str("\n1. English")
-        msglng2 = str("\n2. Spanish")
-        msglng3 = str("\n3. French")
-        msglng4 = str("\n4. Deutsch")
-        print(msglng1 + msglng2)
+        print(langlist())
         numlng = input(LANGUAGES[lng]["numlng"])
         try:
             numlng = int(numlng)
