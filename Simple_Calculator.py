@@ -4,19 +4,19 @@
 pro = int(-1)
 lng = "EN"
 
-LANGUAGES = {"EN": {"msgpro0": "\n0. Finish Program", "msgpro1": "\n1. Select Language",
+LANGUAGES = {"EN": {"msgpro0": "\n0. Finish program", "msgpro1": "\n1. Select panguage",
                     "msgpro2": "\n2. Calculator",
                     "opr": "Write the number of operation you want to do: ",
+                    "ERRORopr": "\nERROR: The indicated number isn't listed.",
                     "oprmsg0": "0. Finish Program", "oprmsg1": "1. Addition",
                     "oprmsg2": "2. Subtraction", "oprmsg3": "3. Multiplication",
                     "oprmsg4": "4. Division", "oprmsg5": "5. Power",
-                    "oprmsg6": "6. Square Root",
+                    "oprmsg6": "6. Square root",
                     "ERRORnum": "ERROR: That isn't a number.",
                     "num1": "Write a number: ", "num2": "Write another number: ",
                     "next": "Press \"Enter\" to continue...",
                     "ERRORnext": "ERROR: Press \"Enter\" to continue...",
                     "finish1": "\nFinishing Program...", "finish2": "The Program Finished",
-                    "ERRORopr": "\nERROR: The indicated number isn't listed.",
                     "pownum1": "Write the power base: ",
                     "pownum2": "Write the exponent of power: ",
                     "numlng": "Write the number of language you want: ",
@@ -26,16 +26,17 @@ LANGUAGES = {"EN": {"msgpro0": "\n0. Finish Program", "msgpro1": "\n1. Select La
                     "msgdiv": "The division of %s between %s is %s",
                     "msgpow": "The power of %s raised to %s is %s",
                     "msgsqr": "The square root of %s is %s",
-                    "msglng1": "\t1. English", "msglng2": "\t2. Spanish",
+                    "msglng1": "1. English - English", "msglng2": "2. Spanish - Español",
+                    "msglng3": "3. French - Français", "msglng4": "4. German - Deutsch",
                     },
-             "ES": {"msgpro0": "\n0. Finalizar Programa", "msgpro1": "\n1. Seleccionar Idioma",
+             "ES": {"msgpro0": "\n0. Finalizar programa", "msgpro1": "\n1. Seleccionar idioma",
                     "msgpro2": "\n2. Calculadora",
                     "opr": "Escribe el número del cálculo que quieres hacer: ",
-                    "ERRORopr": "ERROR: El carácter indicado no es un número.",
-                    "oprmsg0": "0. Finalizar Programa", "oprmsg1": "1. Sumar",
+                    "ERRORopr": "ERROR: El carácter indicado no está en la lista.",
+                    "oprmsg0": "0. Finalizar Programa", "oprmsg1": "1. Suma",
                     "oprmsg2": "2. Resta", "oprmsg3": "3. Multiplicación",
                     "oprmsg4": "4. División", "oprmsg5": "5. Potencia",
-                    "oprmsg6": "6. Raíz Cuadrada",
+                    "oprmsg6": "6. Raíz cuadrada",
                     "ERRORnum": "ERROR: El valor introducido no es un número.",
                     "num1": "Escribe un número: ", "numlng": "Escribe el número del idioma: ",
                     "num2": "Escribe otro número: ", "next": "Presiona \"Enter\" para continuar...",
@@ -49,14 +50,60 @@ LANGUAGES = {"EN": {"msgpro0": "\n0. Finish Program", "msgpro1": "\n1. Select La
                     "msgdiv": "La división de %s entre %s es %s",
                     "msgpow": "La potencia de %s elevado a %s es %s",
                     "msgsqr": "La raiz cuadrada de %s es: %s",
-                    "msglng1": "\t1. Inglés", "msglng2": "\t2. Español",
+                    "msglng1": "1. Inglés - English", "msglng2": "2. Español - Español",
+                    "msglng3": "3. Francés - Français", "msglng4": "4. Alemán - Deutsch",
                     },
-             "FR": {
-
-             },
-             "DE": {
-
-             },
+             "FR": {"msgpro0": "\n0. Terminer le programme",
+                    "msgpro1": "\n1. Sélectionner la langue",
+                    "msgpro2": "\n2. Calculatrice",
+                    "opr": "Écris le numéro du calcul que tu veux faire: ",
+                    "ERRORopr": "ERREUR : Le caractère indiqué n'est pas dans la liste.",
+                    "oprmsg0": "0. Terminer le programme", "oprmsg1": "1. Addition",
+                    "oprmsg2": "2. Soustraction", "oprmsg3": "3. Multiplication",
+                    "oprmsg4": "4. Division", "oprmsg5": "5. Puissance",
+                    "oprmsg6": "6. Racine carrée",
+                    "ERRORnum": "ERREUR : La valeur entrée n'est pas un nombre.",
+                    "num1": "Écris un nombre: ", "numlng": "Escribe el número del idioma: ",
+                    "num2": "Écris un autre nombre: ",
+                    "next": "Appuie sur \"Entrée\" pour continuer...",
+                    "ERRORnext": "ERREUR: Appuie sur \"Entrée\" pour continuer...",
+                    "finish1": "\nFinalisation du programme...", "finish2": "Programme terminé",
+                    "pownum1": "Écris la base de la puissance: ",
+                    "pownum2": "Écris l'exposant de la puissance: ",
+                    "msgsum": "La somme de %s et de %s est %s",
+                    "msgsub": "La soustraction de %s moins %s est %s",
+                    "msgmul": "La multiplication de %s par %s est %s",
+                    "msgdiv": "La division de %s par %s est %s",
+                    "msgpow": "La puissance de %s élevé à %s est %s",
+                    "msgsqr": "La racine carrée de %s est %s",
+                    "msglng1": "1. Anglais - English", "msglng2": "2. Espagnol - Español",
+                    "msglng3": "3. Français - Français", "msglng4": "4. Allemand - Deutsch",
+                    },
+             "DE": {"msgpro0": "\n0. Programm beenden", "msgpro1": "\n1. Sprache auswählen",
+                    "msgpro2": "\n2. Taschenrechner",
+                    "opr": "Gib die Nummer der Berechnung ein, die du durchführen möchtest: ",
+                    "ERRORopr": "FEHLER: Das angegebene Zeichen befindet sich nicht in der Liste.",
+                    "oprmsg0": "0. Programm beenden", "oprmsg1": "1. Addition",
+                    "oprmsg2": "2. Subtraktion", "oprmsg3": "3. Multiplikation",
+                    "oprmsg4": "4. Division", "oprmsg5": "5. Potenz",
+                    "oprmsg6": "6. Quadratwurzel",
+                    "ERRORnum": "FEHLER: Der eingegebene Wert ist keine Zahl.",
+                    "num1": "Gib eine Zahl ein: ", "numlng": "Gib die Nummer der Sprache ein: ",
+                    "num2": "Gib eine weitere Zahl ein: ",
+                    "next": "Drücke \"Enter\", um fortzufahren...",
+                    "ERRORnext": "FEHLER: Drücke \"Enter\", um fortzufahren...",
+                    "finish1": "\nProgramm wird beendet...", "finish2": "Programm beendet",
+                    "pownum1": "Gib die Basis der Potenz ein: ",
+                    "pownum2": "Gib den Exponenten der Potenz ein: ",
+                    "msgsum": "Die summe von %s und %s ist %s",
+                    "msgsub": "Die differenz von %s minus %s ist %s",
+                    "msgmul": "Die multiplikation von %s mal %s ist %s",
+                    "msgdiv": "Die division von %s durch %s ist %s",
+                    "msgpow": "Die potenz von %s hoch %s ist %s",
+                    "msgsqr": "Die quadratwurzel von %s ist %s",
+                    "msglng1": "1. Englisch - English", "msglng2": "2. Spanisch - Español",
+                    "msglng3": "3. Französisch - Français", "msglng4": "4. Deutsch - Deutsch",
+                    },
              }
 
 
@@ -220,31 +267,27 @@ while pro != 0:
     try:
         pro = int(pro)
         if pro < 0 or pro > 2:
-            print("\nERROR: The indicated number isn't listed.")
+            print(LANGUAGES[lng]["ERRORopr"])
     except:
         pro = -1
-        print("\nERROR: The indicated number isn't listed.")
+        print(LANGUAGES[lng]["ERRORopr"])
     if pro == 1:
-        maxlng = int(2)
-        """
-        msglng1 = str("1. English")
-        msglng2 = str("2. Spanish")
-        msglng3 = str("3. French")
-        msglng4 = str("4. Deutsch")
-        """
+        maxlng = int(3)
         numlng = -1
         while numlng <= 0 or numlng > maxlng:
-            print("=" * 50 + "\n" + LANGUAGES[lng]["msglng1"])
-            print(LANGUAGES[lng]["msglng2"] + "\n" + "=" * 50)
+            print("=" * 50)
+            for lng_menu in range(1, 4):
+                print("\t" + LANGUAGES[lng][f'msglng{lng_menu}'])
+            print("=" * 50)
             numlng = input(LANGUAGES[lng]["numlng"])
             numlng = int(numlng)
             try:
                 numlng = int(numlng)
                 if numlng <= 0 or numlng > maxlng:
-                    print("\nERROR: The indicated number isn't listed")
+                    print(LANGUAGES[lng]["ERRORopr"])
             except:
                 numlng = -1
-                print("\nERROR: The indicated number isn't listed")
+                print(LANGUAGES[lng]["ERRORopr"])
         if numlng == 1:
             lng = "EN"
         elif numlng == 2:
