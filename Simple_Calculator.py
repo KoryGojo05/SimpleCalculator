@@ -4,8 +4,8 @@
 pro = int(-1)
 lng = "EN"
 
-LANGUAGES = {"EN": {"msgpro0": "\n0. Finish program", "msgpro1": "\n1. Select panguage",
-                    "msgpro2": "\n2. Calculator",
+LANGUAGES = {"EN": {"msgpro0": "0. Finish program", "msgpro1": "1. Select panguage",
+                    "msgpro2": "2. Calculator",
                     "opr": "Write the number of operation you want to do: ",
                     "ERRORopr": "\nERROR: The indicated number isn't listed.",
                     "oprmsg0": "0. Finish Program", "oprmsg1": "1. Addition",
@@ -29,8 +29,8 @@ LANGUAGES = {"EN": {"msgpro0": "\n0. Finish program", "msgpro1": "\n1. Select pa
                     "msglng1": "1. English - English", "msglng2": "2. Spanish - Español",
                     "msglng3": "3. French - Français", "msglng4": "4. German - Deutsch",
                     },
-             "ES": {"msgpro0": "\n0. Finalizar programa", "msgpro1": "\n1. Seleccionar idioma",
-                    "msgpro2": "\n2. Calculadora",
+             "ES": {"msgpro0": "0. Finalizar programa", "msgpro1": "1. Seleccionar idioma",
+                    "msgpro2": "2. Calculadora",
                     "opr": "Escribe el número del cálculo que quieres hacer: ",
                     "ERRORopr": "ERROR: El carácter indicado no está en la lista.",
                     "oprmsg0": "0. Finalizar Programa", "oprmsg1": "1. Suma",
@@ -53,9 +53,9 @@ LANGUAGES = {"EN": {"msgpro0": "\n0. Finish program", "msgpro1": "\n1. Select pa
                     "msglng1": "1. Inglés - English", "msglng2": "2. Español - Español",
                     "msglng3": "3. Francés - Français", "msglng4": "4. Alemán - Deutsch",
                     },
-             "FR": {"msgpro0": "\n0. Terminer le programme",
-                    "msgpro1": "\n1. Sélectionner la langue",
-                    "msgpro2": "\n2. Calculatrice",
+             "FR": {"msgpro0": "0. Terminer le programme",
+                    "msgpro1": "1. Sélectionner la langue",
+                    "msgpro2": "2. Calculatrice",
                     "opr": "Écris le numéro du calcul que tu veux faire: ",
                     "ERRORopr": "ERREUR : Le caractère indiqué n'est pas dans la liste.",
                     "oprmsg0": "0. Terminer le programme", "oprmsg1": "1. Addition",
@@ -79,8 +79,8 @@ LANGUAGES = {"EN": {"msgpro0": "\n0. Finish program", "msgpro1": "\n1. Select pa
                     "msglng1": "1. Anglais - English", "msglng2": "2. Espagnol - Español",
                     "msglng3": "3. Français - Français", "msglng4": "4. Allemand - Deutsch",
                     },
-             "DE": {"msgpro0": "\n0. Programm beenden", "msgpro1": "\n1. Sprache auswählen",
-                    "msgpro2": "\n2. Taschenrechner",
+             "DE": {"msgpro0": "0. Programm beenden", "msgpro1": "1. Sprache auswählen",
+                    "msgpro2": "2. Taschenrechner",
                     "opr": "Gib die Nummer der Berechnung ein, die du durchführen möchtest: ",
                     "ERRORopr": "FEHLER: Das angegebene Zeichen befindet sich nicht in der Liste.",
                     "oprmsg0": "0. Programm beenden", "oprmsg1": "1. Addition",
@@ -262,7 +262,10 @@ def calc():
 
 
 while pro != 0:
-    print(LANGUAGES[lng]["msgpro0"] + LANGUAGES[lng]["msgpro1"] + LANGUAGES[lng]["msgpro2"])
+    print("=" * 50)
+    for pro_menu in range(0, 3):
+        print("\t" + LANGUAGES[lng][f'msgpro{pro_menu}'])
+    print("=" * 50)
     pro = input("\n" + LANGUAGES[lng]["opr"])
     try:
         pro = int(pro)
@@ -272,11 +275,11 @@ while pro != 0:
         pro = -1
         print(LANGUAGES[lng]["ERRORopr"])
     if pro == 1:
-        maxlng = int(3)
+        maxlng = int(4)
         numlng = -1
         while numlng <= 0 or numlng > maxlng:
             print("=" * 50)
-            for lng_menu in range(1, 4):
+            for lng_menu in range(1, 5):
                 print("\t" + LANGUAGES[lng][f'msglng{lng_menu}'])
             print("=" * 50)
             numlng = input(LANGUAGES[lng]["numlng"])
