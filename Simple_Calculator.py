@@ -4,7 +4,7 @@
 pro = int(-1)
 lng = "EN"
 
-LANGUAGES = {"EN": {"msgpro0": "0. Finish program", "msgpro1": "1. Select panguage",
+LANGUAGES = {"EN": {"msgpro0": "0. Finish program", "msgpro1": "1. Select language",
                     "msgpro2": "2. Calculator",
                     "opr": "Write the number of operation you want to do: ",
                     "ERRORopr": "\nERROR: The indicated number isn't listed.",
@@ -303,11 +303,11 @@ while pro != 0:
     elif pro == 2:
         calc()
 
-print("\nFinishing Program...")
+print(LANGUAGES[lng]["finish1"])
 wait = 0
 while wait != 10000000:
     wait = wait + 1
-print("The Program Finished")
+print(LANGUAGES[lng]["finish2"])
 wait = 0
 while wait != 5000000:
     wait = wait + 1
